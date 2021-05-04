@@ -1,0 +1,8 @@
+Distance(P1,L12)=0.000000
+Distance(P1,L23)=70.630643
+Distance(P1,P2)=70.710678
+Distance(P2,P3)=74.330344
+Distance(P3,P4)=45.000000
+Distance(P4,P1)=111.803399
+Length(PG1)=290.041022
+Area(PG1)=4875.000000
