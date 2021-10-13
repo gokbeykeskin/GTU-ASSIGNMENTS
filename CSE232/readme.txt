@@ -1,0 +1,1 @@
+You can open the .circ files using logisim app
