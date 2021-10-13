@@ -1,0 +1,17 @@
+1) AT C PROGRAM, you should change the usb port.
+my port name is ttyUSB0 so I wrote to the 9. line of the c program:
+int myPort = serialport_init("/dev/ttyUSB0", 9600);
+you should change this.
+
+2) AT UBUNTU, you should give permission to use the port.
+my port name is ttyUSB0 so I wrote to the terminal:
+sudo chmod a+rw /dev/ttyUSB0
+
+3) At fourth option, arduino doesn't gets the second input so after second input,
+output comes after next input. There is no reason for that, I searched and couldn't
+find anything.
+
+
+
+GÖKBEY GAZİ KESKİN
+1901042631
