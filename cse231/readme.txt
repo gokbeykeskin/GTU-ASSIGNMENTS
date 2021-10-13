@@ -1,0 +1,1 @@
+You can open the json files using EasyEDA web page.
