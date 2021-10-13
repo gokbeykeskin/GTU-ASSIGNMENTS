@@ -1,0 +1,56 @@
+
+n
+(a,a)(a,b)(a,e)(b,b)(b,e)(c,c)(c,d)(d,d)(e,e)
+Reflexive: Yes, because all elements are present. 
+Symmetric: No, because(b,a) is not present. 
+Anti-Symmetric: Yes, because (c,d) is found, but (d,c) is not found.
+Transitive: Yes,because (a,e) is found since (a,b) and (b,e) are found.
+
+n
+(a,a)(a,b)(b,a)(b,b)(c,c)(c,d)(d,c)(d,d)
+Reflexive: No, because (e,e) is not present.
+Symmetric: Yes, because (d,c) and (c,d) are present.
+Anti-Symmetric: No, because (b,a) is present. 
+Transitive: Yes,because (d,d) is found since (d,c) and (c,d) are found.
+
+n
+(a,a)(b,b)(c,c)(d,d)(e,e)
+Reflexive: Yes, because all elements are present. 
+ Symmetric: Yes, because there is no different elements. 
+Anti-Symmetric: Yes, because there is no different elements.
+Transitive: Yes, because there is no {a,b} , {b,c} which a!=c
+
+n
+(1,1)(1,2)(2,1)
+Reflexive: No, because (4,4) is not present.
+Symmetric: Yes, because (2,1) and (1,2) are present.
+Anti-Symmetric: No, because (2,1) is present. 
+Transitive: No, because (2,2) doesn't exist.
+
+n
+(1,1)(1,2)(2,1)(2,2)(3,4)(4,1)(4,4)
+Reflexive: No, because (3,3) is not present.
+Symmetric: No, because(4,3) is not present. 
+Anti-Symmetric: No, because (2,1) is present. 
+Transitive: No, because (4,2) doesn't exist.
+
+n
+(2,1)(3,1)(3,2)(4,1)(4,2)(4,3)
+Reflexive: No, because (4,4) is not present.
+Symmetric: No, because(1,2) is not present. 
+Anti-Symmetric: Yes, because (4,3) is found, but (3,4) is not found.
+Transitive: Yes,because (4,2) is found since (4,3) and (3,2) are found.
+
+n
+(1,1)(1,2)(1,3)(1,4)(2,2)(2,3)(2,4)(3,3)(3,4)(4,4)
+Reflexive: Yes, because all elements are present. 
+Symmetric: No, because(2,1) is not present. 
+Anti-Symmetric: Yes, because (3,4) is found, but (4,3) is not found.
+Transitive: Yes,because (2,4) is found since (2,3) and (3,4) are found.
+
+n
+(1,1)(1,2)(1,4)(2,1)(2,2)(3,3)(4,1)(4,4)
+Reflexive: Yes, because all elements are present. 
+Symmetric: Yes, because (4,1) and (1,4) are present.
+Anti-Symmetric: No, because (2,1) is present. 
+Transitive: Yes,because (4,4) is found since (4,1) and (1,4) are found.

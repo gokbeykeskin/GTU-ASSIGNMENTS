@@ -1,0 +1,1 @@
+please don't put newlines at the end of the input file. Because program reads until the EOF.

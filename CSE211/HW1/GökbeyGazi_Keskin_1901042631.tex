@@ -1,0 +1,325 @@
+\documentclass[a4 paper]{article}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\homework}[6]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf CSE 211:~Discrete Mathematics \hfill {\small (#2)}} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1  \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Instructor: {\rm #3} \hfill  {\rm #5} \hfill  {\rm #6}} \hfill}
+       \hbox to 6.28in { {\it Assistant: #4  \hfill #6}}
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\problem}[2]{~\\\fbox{\textbf{Problem #1}}\hfill (#2 points)\newline\newline}
+\newcommand{\subproblem}[1]{~\newline\textbf{(#1)}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Hy}{\mathcal{H}}
+\newcommand{\VS}{\textrm{VS}}
+\newcommand{\solution}{~\newline\textbf{\textit{(Solution)}} }
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\0}{\mathbf{0}}
+
+
+\begin{document}
+\homework{Homework \#1}{Due: 17/11/20}{Dr. Zafeirakis Zafeirakopoulos}{Gizem S\"ung\"u}{}{}
+\textbf{Course Policy}: Read all the instructions below carefully before you start working on the assignment, and before you make a submission.
+\begin{itemize}
+\item It is not a group homework. Do not share your answers to anyone in any circumstance. Any cheating means at least -100 for both sides. 
+\item Do not take any information from Internet.
+\item No late homework will be accepted. 
+\item For any questions about the homework, send an email to gizemsungu@gtu.edu.tr
+\item The homeworks (both latex and pdf files in a zip file) will be
+submitted into the course page of Moodle.
+\item The latex, pdf and zip files of the homeworks should be saved as
+"Name\_Surname\_StudentId".$\{$tex, pdf, zip$\}$.
+\item If the answers of the homeworks have only calculations without any formula or any explanation -when needed- will get zero.
+\item Writing the homeworks on Latex is strongly suggested. However, hand-written paper is still accepted $\textbf{IFF}$ hand writing of the student is clear and understandable to read, and the paper is well-organized. Otherwise, the assistant cannot grade the student's homework.
+\end{itemize}
+
+\problem{1: Conditional Statements}{5+5+5=15}
+State the converse, contrapositive, and inverse of each of these conditional statements.
+
+
+\subproblem{a} If it snows tonight, then I will stay at home.
+\solution
+%%%%%%REMOVE \newline commands while writing your answer%%%%%
+\newline
+\newline
+\textbf{Converse:}
+If I stay at home, then it will snow.
+\newline
+\newline
+\textbf{Contrapositive:}
+If I don't stay at home, then it won't snow
+\newline
+\newline
+\textbf{Inverse:}
+If it doesn't snows tonight, then I won't stay at home.
+\newline
+
+
+
+
+\subproblem{b} I go to the beach whenever it is a sunny summer day.
+\solution
+%%%%%%REMOVE \newline commands while writing your answer%%%%%
+\newline
+\newline
+\textbf{Converse:}
+It is a sunny summer day whenever I go to the beach. 
+\newline
+\newline
+\textbf{Contrapositive:}
+It is not a sunny summer day whenever I don't go the beach.
+\newline
+\newline
+\textbf{Inverse:}
+I don't go to the beach whenever it is not a sunny summer day.
+\newline
+\newline
+\newline
+\newline
+\newline
+
+
+\subproblem{c} If I stay up late, then I sleep until
+noon.
+\solution
+%%%%%%REMOVE \newline commands while writing your answer%%%%%
+\newline
+\newline
+\textbf{Converse:}
+If I sleep until noon, then I stay up late.
+\newline
+\newline
+\textbf{Contrapositive:}
+If I don't sleep until noon, then I don't stay up late.
+\newline
+\newline
+\textbf{Inverse:}
+If I don't stay up late, then I don't sleep until noon.
+\newline
+\newline
+
+
+\problem{2: Truth Tables For Logic Operators}{5+5+5=15}
+Construct a truth table for each of the following compound propositions.
+\subproblem{a} (p $\oplus$ $\neg$ q)
+\solution
+
+\begin{table}[h!]
+\begin{tabular}{llll}
+\textbf{p} & \textbf{q} & {\ul \textbf{$\neg$q}} & {\ul \textbf{p $\oplus$ $\neg$q}}  \\ \hline
+T         & T          & F                 & \multicolumn{1}{c}{T} \\
+T          & F          & T                 & \multicolumn{1}{c}{F} \\
+F          & T          & F                 & \multicolumn{1}{c}{F}                     \\
+F          & F          & T                 & \multicolumn{1}{c}{T}                    
+\end{tabular}
+\end{table}
+
+
+\subproblem{b} (p $\iff$ q) $\oplus$ ( $\neg$ p $\iff$ $\neg$ r)
+\solution 
+\begin{table}[h!]
+\begin{tabular}{cccccccc}
+\textbf{p} & \textbf{q} & {\ul \textbf{r}} & \textbf{$\neg$p} & \textbf{$\neg$r} & {\ul \textbf{p$\iff$ q}} & \textbf{$\neg$p$\iff$$\neg$r} & \textbf{(p$\iff$ q) $\oplus$ ($\neg$p$\iff$$\neg$r)} \\ \hline
+T          & T          & T                & F                & F                & T                        & T                             & F                                                  \\
+T          & T          & F                & F                & T                & T                        & F                             & T                                                  \\
+T          & F          & T                & F                & F                & F                        & T                             & T                                                  \\
+T          & F          & F                & F                & T                & F                        & F                             & F                                                  \\
+F          & T          & T                & T                & F                & F                        & F                             & F                                                  \\
+F          & T          & F                & T                & T                & F                        & T                             & T                                                  \\
+F          & F          & T                & T                & F                & T                        & F                             & T                                                  \\
+F          & F          & F                & T                & T                & T                        & T                             & F                                                 
+\end{tabular}
+\end{table}
+
+
+
+\subproblem{c} (p $\oplus$ q) $\Rightarrow$ (p $\oplus$ $\neg$ q)
+\solution
+
+\begin{table}[h!]
+\begin{tabular}{cccccc}
+\textbf{p} & \textbf{q} & {\ul \textbf{$\neg$p}} & \textbf{p$\oplus$q} & {\ul \textbf{p$\oplus$$\neg$q}} & \textbf{ (p$\oplus$q) $\Rightarrow$ (p$\oplus$$\neg$q)} \\ \hline
+T          & T          & F                      & F                   & T                               & T                                              \\
+T          & F          & T                      & T                   & F                               & F                                              \\
+F          & T          & F                      & T                   & F                               & F                                              \\
+F          & F          & T                      & F                   & T                               & T                                             
+\end{tabular}
+\end{table}
+
+\newpage
+
+
+\problem{3: Predicates and Quantifiers}{21}
+There are three predicate logic statements which represent English sentences as follows.
+
+\begin{itemize}
+	\item P(x): "x can speak English."
+	\item Q(x): "x knows Python."
+	\item H(x): "x is happy."
+\end{itemize}
+
+Express each of the following sentences in terms of P(x), Q(x), H(x), quantifiers, and logical connectives or vice versa. The domain
+for quantifiers consists of all students at the university.
+
+\subproblem{a} There is a student at the university who can speak English and who knows Python.
+\solution
+$\exists x(P(x) \wedge Q(x))$
+\newline
+\subproblem{b} There is a student at the university who can speak English but who doesn’t know Python.
+\solution
+$\exists x(P(x) \wedge \neg Q(x) $
+\newline
+\subproblem{c} Every student at the university either can speak English or knows Python.
+\solution
+$\forall x(P(x) \oplus Q(x)$
+\newline
+\subproblem{d} No student at the university can speak English or knows Python.
+\solution
+$\neg \exists x(P(x) \vee Q(x)$
+\newline
+\subproblem{e} If there is a student at the university who can speak English and know Python, then she/he is happy.
+\solution
+$\exists x(P(x) \wedge Q(x)) \Rightarrow H(x) $
+\newline
+\subproblem{f} At least two students are happy.
+\solution
+$\exists x,y(H(x)\wedge H(y)\wedge x\neq y$
+\newline
+\subproblem{g} $\neg \forall x (Q(x) \wedge P(x))$
+\solution
+Every student at the university can speak English and knows Python.
+
+\problem{4: Mathematical Induction}{21}
+Prove that 3 + 3 . 5 + 3 . $5^2$ + . . . + 3 . $5^n$ =$\frac{3(5^{n+1} - 1)}{4}$
+whenever n is a nonnegative integer.
+\solution
+\newline
+\newline
+for n=1:\newline\newline
+   3 + 3.5 = $\frac{3(5^{1+1} - 1)}{4}$ = 18   $\checkmark$\newline\newline
+for n=2:\newline\newline
+    3 + 3.5 + $3.5^{2}$ = $\frac{3(5^{2+1} - 1)}{4}$ = 93    $\checkmark$\newline\newline
+for n=k (assume true) $\checkmark$ \newline\newline
+for n=k+1:\newline\newline
+    $\frac{3(5^{k+1} - 1)}{4} + 3.5^{k+1}$ = $\frac{3(5^{k+2} - 1)}{4}$\newline\newline
+    $\frac{(5^{k+1} - 1)}{4} + 5^{k+1}$ = $\frac{(5^{k+2} - 1)}{4}$\newline\newline
+    $\frac{(5.5^{k} - 1)}{4} + 5.5^{k}$ = $\frac{(25.5^{k} - 1)}{4}$\newline\newline
+    $\frac{(5.5^{k} - 1)}{4} + \frac{20.5^{k}}{4}$ = $\frac{(25.5^{k} - 1)}{4}$\newline\newline
+    $(5.5^{k} - 1) + 20.5^{k}$ = $(25.5^{k} - 1)$\newline\newline
+    $(25.5^{k} - 1) $ = $(25.5^{k} - 1)    \checkmark$\newline
+    
+    
+\problem{5: Mathematical Induction}{20}
+Prove that $n^2$ - 1 is divisible by 8 whenever n is an odd
+positive integer.
+\solution\newline
+for n=1:\newline\newline
+    $\frac{1^{2} - 1}{8} = 0$ $\checkmark$\newline\newline
+for n=3:\newline\newline
+    $\frac{3^{2} - 1}{8} = 1$ $\checkmark$\newline\newline
+for n=4k+1:\newline\newline
+    ${(4k+1)}^{2}-1 = {16k}^{2} + 8k = 8({2k}^{2} +k)\checkmark$\newline\newline
+for n=4k+3:\newline\newline
+    ${(4k+3)}^{2}-1 = {16k}^{2} + 24k + 8 = 8({2k}^{2} +3k)\checkmark$\newline\newline
+    
+\problem{6: Sets}{8}
+Which of the following sets are equal? Show your work step by step.\newline
+\subproblem{a} $\{$t : t is a root of $x^2$ – 6x + 8 = 0$\}$
+\newline
+\subproblem{b} $\{$y : y is a real number in the closed interval [2, 3]$\}$
+\newline
+\subproblem{c} $\{$4, 2, 5, 4$\}$
+\newline
+\subproblem{d} $\{$4, 5, 7, 2$\}$ - $\{$5, 7$\}$
+\newline
+\subproblem{e} $\{$q: q is either the number of sides of a rectangle or the number of digits in any integer between 11 and 99$\}$\\
+\solution\newline
+a:\newline
+ ${x}^{2} – 6x + 8 = 0 = (x-4)(x-2)$\newline
+ $a: t_{a_1} = 4  ,  t_{a_2} = 2$\newline\newline
+ a: $\{2,4\}$\newline
+ b: [2,3],b$\epsilon$ R\newline
+ c: $\{4,2,5,4\}$\newline
+ d: $\{$4, 5, 7, 2$\}$ - $\{$5, 7$\}$ = $\{4,2\}$\newline
+ e: $\{4,2\}$\newline\newline
+ a: $\{2,4\}$ =  d: $\{4,2\}$ = e: $\{4,2\}$ \newline
+ a = d = e
+
+\newpage
+\problem{Bonus: Logic in Algorithms}{20}
+
+Let p and q be the statements as follows.
+
+\begin{itemize}
+	\item $\textbf{p:}$ It is sunny.
+	\item $\textbf{q:}$ The flowers are blooming.
+\end{itemize}
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[scale=0.5]{circuit.png}
+	\caption{Combinational Circuit}
+	\label{fig: circuit}
+	
+\end{figure*}
+
+In Figure \ref{fig: circuit}, the two statements are used as input. The circuit has 3 gates as AND, OR and NOT operators. It has also a 2x1 multiplexer\footnote{https://www.geeksforgeeks.org/multiplexers-in-digital-logic/} which provides to select one of the two options. 
+\subproblem{a} Write the sentence that "result" output has.
+\solution It is sunny or the flowers are not blooming.
+\newline
+\subproblem{b} Convert Figure \ref{fig: circuit} to an algorithm which you can write in any programming language that you prefer (including pseudocode).
+\solution
+In c++ language:\newline\newline
+//multiPlexerStatement is the input 0 or 1 which changes the multiPlexer.\newline
+if(multiplexerStatement == 0)$\{\newline
+    return (p \&\& q);\newline
+\}$\newline
+else if(multiplexerStatement == 1)$\{\newline
+    return(p \| (!q));\newline
+\}$\newline
+\end{document} 
