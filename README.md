@@ -22,5 +22,5 @@ A detailed course about OOP concepts using C++ and Java Languages
 - Abstraction
 ## [CSE211 - Discrete Mathematics](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE211)
 ## [CSE231 - Circuits and Electronics](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/cse231)
-## [CSE232 - Logic Circuits]()
+## [CSE232 - Logic Circuits](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE232)
 
