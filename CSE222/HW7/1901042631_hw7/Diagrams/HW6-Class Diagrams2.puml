@@ -1,0 +1,205 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface SearchTree
+class BinaryTree
+class BinarySearchTree
+class BinarySearchTreeWithRotate
+class BTree
+class RedBlackTree
+class TwoThreeTree
+class TTNode
+class Node
+
+
+BinaryTree +-- Node : inner class
+BTree +- BTreeIterator : inner class
+SearchTree <.. BinarySearchTree : implements
+TwoThreeTree +-- TTNode : inner class
+
+BinaryTree <|-- BinarySearchTree : extends
+BinaryTree <|-- BTree : extends
+
+BinarySearchTree <|-- BinarySearchTreeWithRotate : extends
+BinarySearchTreeWithRotate <|-- RedBlackTree
+BinaryTree <|-- TwoThreeTree : extends
+
+
+
+
+interface SearchTree{
+  +boolean add(E)
+  +boolean contains(E)
+  +E find(E)
+  +E delete(E)
+  +boolean remove(E)
+
+}
+
+
+class BinaryTree{
+    protected Node < E > root;
+
+      public BinaryTree()
+      protected BinaryTree(Node < E > root)
+      public BinaryTree(E data, BinaryTree < E > leftTree,
+                        BinaryTree < E > rightTree)
+      public BinaryTree < E > getLeftSubtree()
+        public BinaryTree<E> getRightSubtree()
+      public E getData()
+      public boolean isLeaf()
+      public String toString()
+      private void preOrderTraverse(Node < E > node, int depth,
+                                    StringBuilder sb)
+      public static BinaryTree < String >
+            readBinaryTree(BufferedReader bR)
+}
+
+class Node{
+    # E data;
+    # Node < E > left;
+    # Node < E > right;
+    # boolean isRed;
+    public Node(E)
+    public String toString()
+}
+
+class BinarySearchTree{
+    protected boolean addReturn;
+    protected E deleteReturn;
+
+    public E find(E)
+    private E find(Node <E>, E)
+    public boolean add(E)
+    private Node < E > add(Node <E>, E)
+    public E delete(E target)
+    private Node < E > delete(Node <E>, E)
+    public boolean remove(E)
+    public boolean contains(E)
+    private E findLargestChild(Node <E>)
+    public static boolean isAvl(BinarySearchTree<E>)
+    private static boolean isAvl(Node<E>)
+    private static int height(Node<E>)
+    private static int computeBlackHeight(Node<E>)
+    public static boolean isRBTreeBlackHeightValid(BinarySearchTree<E>)
+}
+
+class BinarySearchTreeWithRotate{
+     protected Node <E> rotateRight(Node <E>)
+     protected Node <E> rotateLeft(Node <E>)
+}
+
+class BTree{
+    private int minKeySize = 1;
+        private int minChildrenSize = minKeySize + 1; // 2
+        private int maxKeySize = 2 * minKeySize; // 2
+        private int maxChildrenSize = maxKeySize + 1; // 3
+
+        private Node<T> root = null;
+        private int size = 0;
+        public BTree()
+        public BTree(int)
+        public boolean add(T)
+        private void split(Node<T>)
+        public T remove(T)
+        private T remove(T, Node<T>)
+        private T removeGreatestValue(Node<T>)
+        public void clear()
+        public boolean contains(T)
+        private Node<T> getNode(T)
+        private Node<T> getGreatestNode(Node<T>)
+        private boolean combined(Node<T>)
+        private int getIndexOfPreviousValue(Node<T>, T)
+        private int getIndexOfNextValue(Node<T>, T)
+        public int size()
+        public boolean validate()
+        private boolean validateNode(Node<T>)
+        public String toString()
+}
+class BTreeIterator{
+        private BTree<C> tree = null;
+        private BTree.Node<C> lastNode = null
+        private C lastValue = null
+        private int index
+        private Deque<BTree.Node<C>> toVisit
+
+        protected BTreeIterator(BTree<C>)
+        public boolean hasNext()
+        public C next()
+        public void remove()
+}
+
+
+class RedBlackTree{
+  private boolean fixupRequired
+
+  public boolean add(E item)
+  private Node <E> add(RedBlackNode <E>, E)
+  private void moveBlackDown(RedBlackNode <E>)
+  public E delete(E)
+  private E removeFromLeft(Node <E>, E)
+  private E removeFromRight(Node <E>, E)
+  private Node <E> findReplacement(Node <E>)
+  private E findLargestChild(Node <E>)
+  private Node <E> fixupRight(Node <E>)
+  private Node <E> fixupLeft(Node <E>)
+}
+class TwoThreeTree{
+
+ private TTNode root;
+    private int elements
+    private final int isRootGreater = 1
+    private final int isRootLesser = -1
+    private boolean IsLastElementInsertedCorrectly
+
+    public TwoThreeTree()
+    public int getSize()
+    public boolean isEmpty()
+    public int getLevel()
+    public boolean insert(S value)
+    private TTNode insertR(TTNode current, S element)
+    private TTNode split(TTNode current, S value)
+    public S search(S value)
+    private S searchRec(TTNode current, S value)e(S value)
+    private boolean deleteRec(TTNode current, S value)
+    public void inOrderDisplay()
+    private void inOrderRec(TTNode current)
+    public void preOrderDisplay()
+    private void preOrderRec(TTNode current)
+
+}
+
+class TTNode{
+private S leftKey, rightKey;
+        private TTNode leftChild
+        private TTNode middleChild
+        private TTNode rightChild
+
+        private TTNode()
+        private TTNode(S, S)
+        private TTNode(S, S, TTNode, TTNode)
+        private void setLeftKey(S)
+        private void setRightKey(S)
+
+        private void setLeftChild(TTNode)
+        private void setMidChild(TTNode)
+        private void setRightChild(TTNode)
+
+        private S getLeftKey()
+        private S getRightKey()
+
+        private TTNode getLeftChild()
+        private TTNode getMidChild()
+        private TTNode getRightChild()
+
+        private boolean isTTNodeLeaf()
+        private boolean is2TTNode()
+        private boolean is3TTNode()
+        private S replaceWithMaxKey()
+        private S replaceWithMinKey()
+        private boolean isBalanced()
+        private void rebalance()
+}
+
+
+@enduml

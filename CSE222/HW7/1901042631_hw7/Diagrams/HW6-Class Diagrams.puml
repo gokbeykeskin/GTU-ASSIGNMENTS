@@ -1,0 +1,176 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface MyNavigableSet
+
+class AVLNavigableSet
+class SkipNavigableSet
+
+class MySkipList
+class SLNode
+class SkipListIterator
+class Node
+class AVLTree
+class AVLNode
+class PreOrderIterator
+class DescendingIterator
+
+SkipNavigableSet +- DescendingIterator : inner class
+MySkipList +- SLNode : inner class
+MySkipList +- SkipListIterator : inner class
+AVLTree +- PreOrderIterator : inner class
+AVLTree +- AVLNode : inner class
+MyNavigableSet <.. AVLNavigableSet : implements
+MyNavigableSet <.. SkipNavigableSet : implements
+
+
+AVLNavigableSet --> AVLTree : contains
+SkipNavigableSet --> MySkipList : contains
+
+
+
+interface MyNavigableSet{
+        +void insert(E)
+        +boolean delete(E)
+        +Iterator<E> iterator()
+        +Iterator<E> descendingIterator()
+        +Set<E> headSet(E upperLimit)
+        +Set<E> tailSet(E lowerLimit)
+}
+
+
+class AVLNavigableSet{
+    AVLTree<E> avltree;
+
+    AVLNavigableSet()
+    public void insert(E)
+    public boolean delete(E)
+    public Iterator<E> iterator()
+    public Iterator<E> descendingIterator()
+    public Set<E> headSet(E)
+    public Set<E> tailSet(E)
+}
+class SkipNavigableSet{
+       - MySkipList<E> sl;
+
+       + SkipNavigableSet()
+       public void insert(E)
+       public boolean delete(E)
+       public Iterator descendingIterator()
+       public Iterator<E> iterator()
+       public Set<E> headSet(E)
+       public Set<E> tailSet(E)
+
+}
+
+class DescendingIterator{
+           DescendingIterator()
+           public boolean hasNext()
+           public E next()
+
+}
+
+
+class Node{
+    # E data;
+    # Node < E > left;
+    # Node < E > right;
+    # boolean isRed;
+    public Node(E)
+    public String toString()
+}
+
+
+
+class MySkipList{
+    private final int MAX_LEVEL =10;
+    private final Random seed = new Random();
+    private final SLNode<E> head;
+    private int currentMaxLevel;
+    private int size;
+
+    public MySkipList()
+    public void insert(E)
+    public boolean contains(E)
+    public boolean delete(E)
+    public int getSize()
+    public Iterator<E> SLIterator()
+    private boolean lessThan(E, E)
+    private boolean equalTo(E, E)
+    private boolean greaterThan(E, E)
+    private int flipAndIncrementLevel()
+    public String toString()
+}
+
+class SLNode{
+        private SLNode[] next;
+        private final E value;
+        private final int level;
+
+        public SLNode(E, int)
+        public E getValue()
+        public String toString()
+}
+
+class SkipListIterator{
+        private SLNode<E> current;
+        SkipListIterator()
+        public boolean hasNext()
+        public E next()
+}
+
+class AVLTree{
+        private AVLNode root;
+
+
+        public boolean insert(E)
+        private void delete(AVLNode)
+        public boolean delete(E)
+        private void rebalance(AVLNode)
+        private AVLNode rotateLeft(AVLNode)
+        private AVLNode rotateRight(AVLNode)
+        private AVLNode rotateLeftThenRight(AVLNode)
+        private AVLNode rotateRightThenLeft(AVLNode)
+        private int height(AVLNode)
+        private void setBalance(AVLNode)
+        public void printBalance()
+        private void printBalance(AVLNode)
+        private void reheight(AVLNode)
+        public boolean search(E)
+        private AVLNode searchHelper(AVLNode, E)
+
+        public Iterator<E> preOrderIterator()
+        public void preOrder()
+        private void preOrder(AVLNode)
+
+}
+
+class AVLNode{
+            private E key;
+            private int balance;
+            private int height;
+            public AVLNode left, right, parent;
+            AVLNode(E k, Node p)
+            public String toString
+}
+
+
+class PreOrderIterator{
+    public Stack<AVLNode> stack
+    public AVLNode current
+
+    public PreOrderIterator()
+
+    public boolean hasNext()
+    public E next()
+
+}
+
+class DescendingIterator{
+            ArrayList<E> arr;
+            DescendingIterator()
+            public boolean hasNext()
+            public E next()
+}
+
+@enduml
