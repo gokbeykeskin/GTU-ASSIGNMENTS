@@ -1,0 +1,16 @@
+(set resStr "Result is:")
+(deffun func (x y)
+	(if(not(equal x y))
+		(set x 10)
+		(set y 20))
+	
+
+	(disp resStr (* (+x y) (/ x y)))
+)
+
+(set myVar1 20)
+(set myVar2 30)
+
+
+(func myVar1 myVar2)
+(exit)

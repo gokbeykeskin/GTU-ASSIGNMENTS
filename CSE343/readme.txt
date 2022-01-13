@@ -1,0 +1,1 @@
+Term project of this lesson is pinned at my Github profile. (anicare_frontend)
