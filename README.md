@@ -1,4 +1,5 @@
 # GTU-ASSIGNMENTS
+All of my Computer Science Related Assignments
 ## [CSE101 - Introduction to Computer Engineering (1st semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE101)
 An introduction to Computer Concepts
 - C
