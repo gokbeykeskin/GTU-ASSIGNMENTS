@@ -47,7 +47,7 @@ A detailed course about OOP concepts using C++ and Java Languages
 ## [CSE341 - Programming Languages (5th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE341)
 - Context Free Grammers & Backus-Nour Form
 - Compilers & Interpreters
-- Programming Paradigms (Iterative, OOP, Logic Programming, Functional Programming)
+- Programming Paradigms (Imperative(Procedural, OOP), Declerative(Logic, Functional, Mathematical)
 - Lisp & Prolog
 ## [CSE343 - Software Engineering (5th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE343)
 - Project Management (mostly focused on Scrum)
