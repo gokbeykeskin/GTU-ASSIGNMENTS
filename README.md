@@ -32,7 +32,7 @@ A detailed course about OOP concepts using C++ and Java Languages
 ## [CSE232 - Logic Circuits (4th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE232)
 - Truth Table & Karnaugh Map
 - Logical Circuit Design
-## [CSE321 - Introduction to Alghoritm Design (5th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE321)
+## [CSE321 - Introduction to Algorithm Design (5th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE321)
 - Asymptotic Notation & Algorithm Analysis
 - Brute Force
 - Exhaustive Algorithms
