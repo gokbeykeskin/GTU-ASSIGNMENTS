@@ -58,3 +58,4 @@ A detailed course about OOP concepts using C++ and Java Languages
 - System Calls
 - Signals
 - Multiprocessing & Multithreading
+- Interprocess Communication & Synchronization
