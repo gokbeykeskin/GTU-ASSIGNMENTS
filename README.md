@@ -60,4 +60,5 @@ A detailed course about OOP concepts using C++ and Java Languages
 - Multiprocessing & Multithreading
 - Interprocess Communication & Synchronization
   - Pipe,Fifo,Shared Memory
-  - Semaphores,Mutexes, Conditional Variables
+  - Semaphores,Mutexes, Conditional Variables, Monitors
+  - Sockets
