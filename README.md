@@ -29,6 +29,7 @@ A detailed course about OOP concepts using C++ and Java Languages
 - Sets
 - Trees
 - Graphs
+- Maps
 ## [CSE232 - Logic Circuits (4th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE232%20-%20Logic%20Circuits)
 - Truth Table & Karnaugh Map
 - Logical Circuit Design
@@ -60,4 +61,5 @@ A detailed course about OOP concepts using C++ and Java Languages
 - Multiprocessing & Multithreading
 - Interprocess Communication & Synchronization
   - Pipe,Fifo,Shared Memory
-  - Semaphores,Mutexes, Conditional Variables
+  - Semaphores,Mutexes, Conditional Variables, Monitors
+  - Sockets
