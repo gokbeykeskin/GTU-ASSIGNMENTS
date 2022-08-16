@@ -1,5 +1,5 @@
 # GTU-ASSIGNMENTS
-All of my Computer Science Related Assignments
+Some of my Computer Science Related Assignments
 ## [CSE101 - Introduction to Computer Engineering (1st semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE101%20-%20Introduction%20to%20Computer%20Science)
 An introduction to Computer Concepts
 - C
@@ -53,6 +53,13 @@ A detailed course about OOP concepts using C++ and Java Languages
 ## [CSE343 - Software Engineering (5th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE343%20-%20Software%20%20Engineering)
 - Project Management (mostly focused on Scrum)
 - Documentation, Diagrams, User Stories
+
+## [CSE312 - Operating Systems (6th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE312%20-%20Operating%20Systems)
+- Memory Management
+- File Systems
+- Input/Output
+- Deadlocks
+- Virtualization
 
 ## [CSE344 - System Programming (6th semester)](https://github.com/gokbeykeskin/GTU-ASSIGNMENTS/tree/main/CSE344%20-%20System%20Programming)
 - Linux/Unix/Posix
