@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gokbey/Desktop/RTSA_HW1'
+make: Leaving directory '/home/gokbey/Desktop/RTSA_HW1'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
