@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gokbey/Downloads/1901042631 6/1901042631/src'
+gcc -o server code/server.c code/utils.c code/queue.c -pthread code/networking.c -Wall
+gcc -o servant code/servant.c code/utils.c code/networking.c -pthread -Wall
+gcc -o client code/client.c code/utils.c code/networking.c -pthread -Wall
+make: Leaving directory '/home/gokbey/Downloads/1901042631 6/1901042631/src'
+ 
